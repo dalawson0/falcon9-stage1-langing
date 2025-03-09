@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falcon 9 Landing Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .flip-container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .note-image {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+        .flip-buttons {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Falcon 9 - Stage 1 Landing Project</h1>
+    <p>Documenting my work on Falcon 9 landing simulation.</p>
+    
+    <div class="flip-container">
+        <img id="noteImage" class="note-image" src="notes/front_page.jpg" alt="Front Page">
+    </div>
+    
+    <div class="flip-buttons">
+        <button onclick="flipPage('front')">Front Page</button>
+        <button onclick="flipPage('back')">Back Page</button>
+    </div>
+    
+    <script>
+        function flipPage(side) {
+            const noteImage = document.getElementById("noteImage");
+            if (side === 'front') {
+                noteImage.src = "notes/front_page.jpg";
+            } else {
+                noteImage.src = "notes/back_page.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
